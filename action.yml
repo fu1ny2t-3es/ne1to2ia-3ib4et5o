@@ -58,9 +58,12 @@ runs:
         # merge volume-level
 
 
-    - shell: bash
+
+    - working-directory: libretro
+      shell: bash
       run: |
         make platform="win" CC="ccache $MINGW_CC" CXX="ccache $MINGW_CXX"
+
 
 
     - uses: actions/upload-artifact@main
