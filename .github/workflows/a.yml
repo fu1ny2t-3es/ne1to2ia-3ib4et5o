@@ -1,15 +1,21 @@
 on:
+  push:
   workflow_dispatch:
-  schedule:
-    - cron: '0 5 * * *'
 
 
 jobs:
 
-  cron:
+  build_libretro:
+    strategy:
+      matrix:
+        arch: [x86, x64]
+      fail-fast: false
+
+
     runs-on: ubuntu-latest
 
     steps:
-      - uses: li1ht2ay-3es/ne1to2ia-3ib4et5o@cron
+      - uses: li1ht2ay-3es/ne1to2ia-3ib4et5o@build-libretro
         with:
           token: ${{ secrets.token }}
+          arch: ${{ matrix.arch }}
