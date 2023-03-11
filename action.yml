@@ -49,9 +49,7 @@ runs:
 
         # merge audio-rate
         # merge mingw-flags
-        # merge overscan-crop
-
-        # merge color-depth theirs     # requires overscan first
+        merge overscan-crop
 
         # merge libretro-options
         # merge osd-message
