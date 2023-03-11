@@ -1069,7 +1069,7 @@ static void check_variables(void)
    var.key = "nestopia_overscan_v_top";
 
    if (environ_cb(RETRO_ENVIRONMENT_GET_VARIABLE, &var)) {
-      overscan_v_left = atoi(var.value);
+      overscan_v_top = atoi(var.value);
    }
 
    var.key = "nestopia_overscan_v_bottom";
