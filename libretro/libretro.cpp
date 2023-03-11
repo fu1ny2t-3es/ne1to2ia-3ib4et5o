@@ -64,7 +64,7 @@ static char samp_dir[256];
 static unsigned blargg_ntsc;
 static bool fds_auto_insert;
 static int overscan_v_top, overscan_v_bottom;
-static int overscan_h_left, overscan_v_right;
+static int overscan_h_left, overscan_h_right;
 static bool libretro_supports_option_categories = false;
 static unsigned aspect_ratio_mode;
 static unsigned tpulse;
