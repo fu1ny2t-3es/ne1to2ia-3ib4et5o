@@ -1304,8 +1304,8 @@ void retro_run(void)
    int dif = blargg_ntsc ? 9 : 4;
 
    // Absolute mess of inline if statements...
-   video_cb(video_buffer + (overscan_v_top ? (((overscan_h_left + overscan_h_right) * dif) + (blargg_ntsc ? Api::Video::Output::NTSC_WIDTH : Api::Video::Output::WIDTH) * 8) : (overscan_h_left * dif) + 0),
-         video_width - ((overscan_h_left + overscan_h_right) * dif),
+   video_cb(video_buffer + (overscan_v_top ? ((((overscan_h_left + overscan_h_right) * dif) / 4) + (blargg_ntsc ? Api::Video::Output::NTSC_WIDTH : Api::Video::Output::WIDTH) * 8) : ((overscan_h_left * dif) / 4) + 0)
+         video_width - (((overscan_h_left + overscan_h_right) * dif) / 4),
          Api::Video::Output::HEIGHT - (overscan_v_top + overscan_v_bottom),
          pitch);
 
