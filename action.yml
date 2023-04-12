@@ -1,6 +1,3 @@
-description: build libretro
-
-
 inputs:
   token:
     description: github token
@@ -46,7 +43,6 @@ runs:
           echo "";
         }
 
-
         # merge audio-rate
         # merge mingw-flags
         merge overscan-crop
@@ -54,7 +50,6 @@ runs:
         # merge libretro-options
         # merge osd-message
         # merge volume-level
-
 
 
     - working-directory: libretro
